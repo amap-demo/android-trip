@@ -14,7 +14,9 @@
 ###1:配置搭建AndroidSDK工程###
 - [Android Studio工程搭建方法](http://lbs.amap.com/api/android-sdk/guide/creat-project/android-studio-creat-project/#add-jars).
 - [通过maven库引入SDK方法](http://lbsbbs.amap.com/forum.php?mod=viewthread&tid=18786).
-## 接口使用 ##
+
+###接口使用###
+
 搭建出行类用车乘客端的LBS部分，仅需要以下三步：
 ###Step 1：定位+逆地理编码+地图打点，搞定前端展示
 效果如下图。屏幕中间的蓝色标记 用到了定位功能。位于顶部的输入框 用到了逆地理编码功能；地图上蓝色的出租车标识 运用了地图打点。
