@@ -10,6 +10,11 @@
 ![Screenshot]( https://raw.githubusercontent.com/amap-demo/android-trip/master/resource/download.png)  
 
 ##出行类解决方案——乘客端
+## 使用方法##
+###1:配置搭建AndroidSDK工程###
+- [Android Studio工程搭建方法](http://lbs.amap.com/api/android-sdk/guide/creat-project/android-studio-creat-project/#add-jars).
+- [通过maven库引入SDK方法](http://lbsbbs.amap.com/forum.php?mod=viewthread&tid=18786).
+## 接口使用 ##
 搭建出行类用车乘客端的LBS部分，仅需要以下三步：
 ###Step 1：定位+逆地理编码+地图打点，搞定前端展示
 效果如下图。屏幕中间的蓝色标记 用到了定位功能。位于顶部的输入框 用到了逆地理编码功能；地图上蓝色的出租车标识 运用了地图打点。
@@ -73,7 +78,8 @@ poiSearchTask.search(mDestinaionText.getText().toString(),RouteTask.getInstance(
 
 拷贝RouteTask.java文件到创建的工程中，参照MainActivity.java文件中的示例代码，实现OnRouteCalculateListener接口。调用的核心方法如下：
 ``` java
-@Override //OnRouteCalculateListener提供的onRouteCalculate回调函数，高小德用车已经将返回onRouteCalculate结果的代码完整封装
+@Override 
+//OnRouteCalculateListener提供的onRouteCalculate回调函数，高小德用车已经将返回onRouteCalculate结果的代码完整封装
 public void onRouteCalculate(float cost,float distance,int duration) {
 	mDestinationContainer.setVisibility(View.VISIBLE);
 
