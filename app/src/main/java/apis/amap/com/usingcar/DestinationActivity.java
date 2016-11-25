@@ -77,7 +77,7 @@ public class DestinationActivity  extends Activity implements View.OnClickListen
             Toast.makeText(getApplicationContext(), "检查网络，Key等问题", Toast.LENGTH_SHORT).show();
             return;
         }
-        InputTipTask.getInstance(getApplicationContext(), mRecomandAdapter).searchTips(s.toString(),
+        InputTipTask.getInstance( mRecomandAdapter).searchTips(getApplicationContext(),s.toString(),
                 RouteTask.getInstance(getApplicationContext()).getStartPoint().city);
 
 

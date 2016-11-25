@@ -57,11 +57,15 @@ Utils.addEmulateData(mAmap, mStartPosition);//调用addEmulateData方法。参�
 ``` java
 @Override
 //在onTextChanged方法中调用InputTipTask 的getInstance方法
+@Override
 public void onTextChanged(CharSequence s, int start, int before, int count) {
-InputTipTask.getInstance(getApplicationContext(),
-mRecomandAdapter).searchTips(s.toString(),
-			   RouteTask.getInstance(getApplicationContext()).getStartPoint().city);
-	}
+    if(RouteTask.getInstance(getApplicationContext()).getStartPoint()==null){
+        Toast.makeText(getApplicationContext(), "检查网络，Key等问题", Toast.LENGTH_SHORT).show();
+        return;
+    }
+    InputTipTask.getInstance( mRecomandAdapter).searchTips(getApplicationContext(),s.toString(),
+            RouteTask.getInstance(getApplicationContext()).getStartPoint().city);
+}
 ```	
 输入提示功能完成！
 

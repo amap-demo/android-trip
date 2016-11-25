@@ -18,6 +18,7 @@ import com.amap.api.services.route.BusRouteResult;
 import com.amap.api.services.route.DrivePath;
 import com.amap.api.services.route.DriveRouteResult;
 import com.amap.api.services.route.Path;
+import com.amap.api.services.route.RideRouteResult;
 import com.amap.api.services.route.RouteSearch;
 import com.amap.api.services.route.RouteSearch.DriveRouteQuery;
 import com.amap.api.services.route.RouteSearch.FromAndTo;
@@ -156,4 +157,10 @@ public class RouteTask implements OnRouteSearchListener {
 
 	}
 
+	@Override
+	public void onRideRouteSearched(RideRouteResult arg0, int arg1){
+
+		// TODO Auto-generated method stub
+
+	}
 }
