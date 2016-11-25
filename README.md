@@ -55,7 +55,6 @@ Utils.addEmulateData(mAmap, mStartPosition);//调用addEmulateData方法。参�
 
 拷贝InputTipTask.java到创建的工程中，查看DestinationActivity.java示例，实现TextWatcher接口后，进行如下调用：
 ``` java
-@Override
 //在onTextChanged方法中调用InputTipTask 的getInstance方法
 @Override
 public void onTextChanged(CharSequence s, int start, int before, int count) {
