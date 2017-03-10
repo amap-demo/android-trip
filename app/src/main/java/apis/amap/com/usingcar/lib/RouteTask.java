@@ -112,7 +112,7 @@ public class RouteTask implements OnRouteSearchListener {
 
 	public void removeRouteCalculateListener(OnRouteCalculateListener listener) {
 		synchronized (this) {
-			mListeners.add(listener);
+			mListeners.remove(listener);
 		}
 	}
 

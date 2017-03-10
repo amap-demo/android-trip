@@ -9,8 +9,6 @@
 package apis.amap.com.usingcar.lib;
 
 import android.content.Context;
-import android.location.Location;
-import android.os.Bundle;
 import android.text.TextUtils;
 
 import com.amap.api.location.AMapLocation;
@@ -85,8 +83,6 @@ public class LocationTask implements AMapLocationListener,
 		option.setOnceLocation(false);
 		option.setInterval(8*1000);
 		mLocationClient.setLocationOption(option);
-
-
 		mLocationClient.startLocation();
 
 	}
@@ -105,6 +101,7 @@ public class LocationTask implements AMapLocationListener,
 	public void onDestroy() {
 		mLocationClient.stopLocation();
 		mLocationClient.onDestroy();
+		mLocationTask = null;
 	}
 
 
@@ -122,7 +119,6 @@ public class LocationTask implements AMapLocationListener,
 			mOnLocationGetlisGetListener.onLocationGet(entity);
 
 		}
-
 	}
 
 	@Override

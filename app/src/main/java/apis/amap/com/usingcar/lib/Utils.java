@@ -8,7 +8,6 @@
   
 package apis.amap.com.usingcar.lib;
 
- 
 import java.util.ArrayList;
 
 import com.amap.api.maps.AMap;
@@ -62,7 +61,17 @@ public class Utils {
 				 
 			 }
 		 }
-		
+	}
+
+	/**
+	 * 移除marker
+	 */
+	public static void removeMarkers() {
+		for(Marker marker:markers){
+			marker.remove();
+			marker.destroy();
+		}
+		markers.clear();
 	}
 	
 }

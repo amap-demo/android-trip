@@ -79,8 +79,6 @@ public class DestinationActivity  extends Activity implements View.OnClickListen
         }
         InputTipTask.getInstance( mRecomandAdapter).searchTips(getApplicationContext(),s.toString(),
                 RouteTask.getInstance(getApplicationContext()).getStartPoint().city);
-
-
     }
 
     @Override
