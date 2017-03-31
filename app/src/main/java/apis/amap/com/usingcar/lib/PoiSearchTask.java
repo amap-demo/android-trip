@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.util.Log;
 
+import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.PoiItem;
 
 import com.amap.api.services.poisearch.PoiResult;
@@ -44,6 +46,7 @@ public class PoiSearchTask implements OnPoiSearchListener {
 	}
 
 	public void search(String keyWord,String city) {
+		Log.i("MY","search");
 		Query query = new PoiSearch.Query(keyWord, "", city);
 		query.setPageSize(10); 
 		query.setPageNum(0); 
@@ -57,7 +60,7 @@ public class PoiSearchTask implements OnPoiSearchListener {
 
 	@Override
 	public void onPoiSearched(PoiResult poiResult, int resultCode) {
-		if (resultCode == 0 && poiResult != null) {
+		if (resultCode == AMapException.CODE_AMAP_SUCCESS && poiResult != null) {
 			ArrayList<PoiItem> pois=poiResult.getPois();
 			if(pois==null){
 				return;

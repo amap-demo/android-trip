@@ -13,6 +13,7 @@ import java.util.List;
 
 import android.content.Context;
 
+import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.route.BusRouteResult;
 import com.amap.api.services.route.DrivePath;
@@ -126,7 +127,7 @@ public class RouteTask implements OnRouteSearchListener {
 	@Override
 	public void onDriveRouteSearched(DriveRouteResult driveRouteResult,
 			int resultCode) {
-		if (resultCode == 1000 && driveRouteResult != null) {
+		if (resultCode == AMapException.CODE_AMAP_SUCCESS && driveRouteResult != null) {
 			synchronized (this) {
 				for (OnRouteCalculateListener listener : mListeners) {
 					List<DrivePath> drivepaths = driveRouteResult.getPaths();

@@ -11,6 +11,7 @@ package apis.amap.com.usingcar.lib;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.geocoder.GeocodeResult;
 import com.amap.api.services.geocoder.GeocodeSearch;
@@ -58,7 +59,7 @@ public class RegeocodeTask implements OnGeocodeSearchListener {
 	@Override
 	public void onRegeocodeSearched(RegeocodeResult regeocodeReult,
 			int resultCode) {
-		if (resultCode == 0) {
+		if (resultCode == AMapException.CODE_AMAP_SUCCESS) {
 			if (regeocodeReult != null
 					&& regeocodeReult.getRegeocodeAddress() != null
 					&& mOnLocationGetListener != null) {
