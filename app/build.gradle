@@ -25,8 +25,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.amap.api:map3d-native:latest.integration'
-    compile 'com.amap.api:map3d:latest.integration'
+    compile 'com.amap.api:3dmap:latest.integration'
     compile 'com.amap.api:search:latest.integration'
     compile 'com.amap.api:location:latest.integration'
     testCompile 'junit:junit:4.12'
